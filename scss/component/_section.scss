@@ -1,0 +1,27 @@
+@use '../foundation/index' as f;
+
+.c-section__title{
+    font-size: 40px;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    padding-bottom: 16px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: 60px;
+        background-color: f.$color-section-accent;
+    }
+
+    @include f.mq('sp'){
+        font-size: 30px;
+    }
+}
+
+
+

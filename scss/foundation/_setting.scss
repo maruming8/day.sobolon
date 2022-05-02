@@ -1,0 +1,65 @@
+//カラーパレット
+$palette-white: #FFFFFF;
+$palette-black: #333333; //20%darkで000000
+
+$palette-gray: #888888; //30%lightがd5d5d5
+$palette-whitesmoke: #F7F7F7; //53%darkで707070
+$palette-lightgray: #606060; //50%lightがe0e0e0、透明度29？も使う
+$palette-silverGray: #989898; 
+
+$palette-blue: #3EA1D1; //0.7も使用
+$palette-pink: #E7728E;
+
+
+
+//機能ごとのカラー定義
+$color-body-font: $palette-black;
+$color-body-bg: $palette-white;
+$color-link-font: $palette-black;
+
+$color-header-bg: $palette-white;
+$color-header-hover: $palette-blue;
+$color-drawer-bg: $palette-blue;
+$color-drawer-link: $palette-white;
+$color-drawer-icon: $palette-blue;
+
+$color-top-textArea: $palette-white;
+
+$color-section-accent: $palette-blue;
+
+$color-card-shadow: #{$palette-lightgray}29;
+
+$color-message-mask: darken($palette-black, 20%);
+$color-message-border: darken($palette-whitesmoke, 53%);
+$color-message-font: $palette-white;
+
+$color-products-price: $palette-silverGray;
+
+$color-btn-bg: $palette-white;
+$color-btn-font: $palette-blue;
+$color-btn-border: $palette-blue;
+
+$color-news-text: $palette-gray;
+$color-news-border: lighten($palette-lightgray, 50%);
+
+$color-contact-title: $palette-blue;
+$color-check-font: $palette-blue;
+$color-form-link: $palette-blue;
+$color-check-border: $palette-blue;
+$color-check-bg: $palette-white;
+$color-form-bg: $palette-white;
+$color-form-shadow: #{$palette-lightgray}29;
+$color-label-must: $palette-pink;
+$color-label-bg: rgba($palette-blue, 0.7);
+$color-label-font: $palette-white;
+
+$color-footer-bg: $palette-whitesmoke;
+$color-footer-copyright: $palette-gray;
+$color-footer-sns: $palette-blue;
+
+  
+//フォント
+$font-family: 'ヒラギノ明朝 ProN','Hiragino Mincho ProN','Noto Serif JP', serif;
+
+//インナー幅
+$layout-with-inner: 1280px;

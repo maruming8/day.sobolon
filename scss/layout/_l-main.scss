@@ -1,0 +1,106 @@
+@use "../foundation/index" as f;
+
+//top
+.l-top {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 70px;
+}
+.l-top__inner {
+    @include f.layout();
+    position: relative;
+}
+
+//section
+
+.l-section {
+    width: 100%;
+    margin-top: 160px;
+
+    @include f.mq('sp'){
+        margin-top: 96px;
+    }
+
+}
+
+.l-section__inner {
+    @include f.layout();
+    margin-top: 64px;
+
+    @include f.mq('sp'){
+        margin-top: 48px;
+    }
+}
+
+//concept
+.l-concept{
+
+}
+.l-concept__inner{
+
+}
+
+//feature
+.l-feature{
+
+}
+.l-feature__inner{
+
+}
+
+//message
+.l-message{
+    max-width: 1280px;
+    height: 478px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('../img/bg.png') center top / cover;
+    border: 1px solid rgba(f.$color-message-border,.12);
+
+    @include f.mq('sp'){
+        height: 484px;
+        background: url('../img/bg-sp.png') center top / cover;
+        border: none;
+    }
+}
+.l-message__inner{
+    margin-top: 0;
+    width: 100%;
+    height: inherit;
+    background: rgba(f.$color-message-mask,.12);
+    position: relative;
+}
+
+//products
+.l-products{
+
+}
+.l-products__inner{
+    width: 1020px;
+}
+
+//news
+.l-news{
+
+}
+.l-news__inner{
+    width: 1120px;
+
+    @include f.mq('sp'){
+        padding: 0 32px;
+    }
+}
+
+//contact
+.l-contact{
+    background: url('../img/contact@2x.png') no-repeat center / cover;
+    padding-bottom: 85px;
+    padding-top: 72px;
+
+    @include f.mq('sp'){
+        padding: 58px 0;
+    }
+}
+.l-contact__inner{
+    width: 590px;
+}

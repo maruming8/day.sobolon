@@ -1,0 +1,22 @@
+@use "../foundation/index" as  f;
+
+.l-header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: f.$color-header-bg;
+
+    @include f.mq('sp'){
+        height: 60px;
+    }
+}
+.l-header__inner{
+    @include f.layout;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

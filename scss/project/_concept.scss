@@ -1,0 +1,20 @@
+@use "../foundation/index" as  f;
+
+.p-concept__img{
+    width: calc(600px / 1200px * 100%);
+}
+.p-concept__body{
+    width: 520px;
+}
+.p-concept__lead{
+    @include f.mq('sp'){
+        margin-top: 40px;
+    }
+}
+.p-concept__text{
+    margin-top: 48px;
+
+    @include f.mq('sp'){
+        margin-top: 32px;
+    }
+}

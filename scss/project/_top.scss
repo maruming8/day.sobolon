@@ -1,0 +1,50 @@
+@use '../foundation/index' as f;
+
+.p-top__img{
+    width: calc(990px / 1200px * 100%);
+    margin-left: auto;
+
+    @include f.mq('sp'){
+        width: 100%;
+
+        img{
+            height: 414px;
+            object-fit: cover;
+            object-position: 80% 100%;
+        }
+    }
+}
+.p-top__textArea{
+    width: 330px;
+    height: 330px;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    background-color: f.$color-top-textArea;
+    padding: 92px 0;
+
+    @include f.mq('sp'){
+        position: static;
+        transform: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+}
+.p-top__lead{
+    font-size: 26px;
+    font-weight: 600;
+    line-height: (44 / 26);
+
+    @include f.mq('sp'){
+        margin-top: 40px;
+    }
+}
+.p-top__text{
+    @include f.text();
+
+    @include f.mq('sp'){
+        margin-top: 32px;
+    }   
+}

@@ -1,0 +1,29 @@
+@use "../foundation/index" as  f;
+
+.c-btn--center{
+    margin-top: 50px;
+    text-align: center;
+}
+.c-btn{
+    display: inline-block;
+    padding: 16px 54px;  
+    background-color: f.$color-btn-bg;
+    border: 1px solid f.$color-btn-border; //hover時とサイズ感同じになるよう
+    color: f.$color-btn-font;
+    font-size: 0.875rem; 
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include f.mq('pc'){
+    &:not([type="submit"]){
+        &:focus,
+        &:hover,{
+            background-color: f.$color-btn-font;
+            color: f.$color-btn-bg;
+        }
+    }
+    }
+}

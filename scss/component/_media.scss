@@ -1,0 +1,34 @@
+@use "../foundation/index" as  f;
+
+.c-media{
+    display: flex;
+    align-items: center;
+
+    &--reverse{
+        flex-direction: row-reverse;
+    }
+
+    @include f.mq('sp'){
+        display: block;
+    }
+
+    .c-media__img{
+
+        @include f.mq('sp'){
+            width: 100%;
+        }
+    }
+    .c-media__body{
+        vertical-align: middle;
+    
+        @include f.mq('sp'){
+            width: 100%;
+        }
+    }  
+}
+.c-media__lead{
+    @include f.lead();
+}
+.c-media__text{
+    @include f.text();
+}

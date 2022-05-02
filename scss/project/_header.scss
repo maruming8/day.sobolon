@@ -1,0 +1,120 @@
+@use '../foundation/index' as f;
+
+.p-header__logo{
+    width: 120px;
+}
+.p-header__menu{
+    @include f.mq('sp'){
+        display: none;
+    }
+
+}
+.p-header__list{
+    display: flex;
+}
+.p-header__item{
+    margin-left: 48px;
+    font-weight: 300;
+
+    a{
+        @include f.mq('pc'){
+            transition: color .4s;
+            &:focus,
+            &:hover{
+                color: f.$color-header-hover;
+            }
+        }
+    }
+}
+
+//ドロワーメニュー
+.p-drawer__menu{
+    width: 270px;
+    height: 100%;
+    background: f.$color-drawer-bg;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 299;
+    transform: translateX(105%);
+    transition: transform .5s ease 0s;
+
+    &.is-active{
+        transform: translateX(0);
+    }
+}
+.p-drawer__list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.p-drawer__item{
+    position: relative;
+    margin-top: 40px;
+    padding: 6px 15px;    
+
+    a{
+        color: f.$color-drawer-link;
+        font-weight: 600;
+
+        &.is-active,
+        &:focus,
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+}
+.p-drawerIcon{
+    position: fixed;
+    top: 22px;
+    right: 15px;
+    z-index:300;
+    width: 30px;
+    height: 18px;
+    display: none;
+
+    &.is-active{
+        transition: transform .5s ease 0s;
+
+        .p-drawerIcon__bar{
+
+        &:nth-child(1){
+            top: 8px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        &:nth-child(2){
+            display: none;
+        }
+        &:nth-child(3){
+            top: 6px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+    }
+    }
+
+    @include f.mq('sp'){
+        display: block;
+    }
+}
+   
+.p-drawerIcon__bar {
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 30px;
+    background: f.$color-drawer-icon;
+    -webkit-transition: ease .5s;
+    transition: ease .5s;
+
+    &:nth-child(1){
+        top: 0;
+    }
+    &:nth-child(2){
+        margin: 6px 0;
+    }
+    &:nth-child(3){
+        top:0;
+    }    
+}

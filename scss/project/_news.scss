@@ -1,0 +1,54 @@
+@use "../foundation/index" as  f;
+
+.p-news__media{
+    padding-bottom: 24px;
+    border-bottom: 1px solid f.$color-news-border;
+
+    &:not(:first-child){
+        padding-top: 22px;
+
+        @include f.mq('sp'){
+            padding-top: 24px;
+        }
+    }
+    &:focus,
+    &:hover{
+        .p-news__img img{
+            transform: scale(1.1,1.1);
+        }
+    }
+}
+.p-news__img{
+    width: calc(260px / 1040px * 100%);
+    overflow: hidden;
+}
+.p-news__body{
+    width: calc(740px / 1040px * 100%);
+    margin-left: calc(40px / 1040px * 100%);
+
+    @include f.mq('sp'){
+        margin-left: 0;
+    }
+}
+.p-news__time{
+    font-size: 0.875rem;
+
+    @include f.mq('sp'){
+        margin-top: 24px;
+    }
+}
+.p-news__lead{
+    font-size: 1.125rem;
+    line-height: (31 / 18); 
+    margin-top: 16px;
+
+    @include f.mq('sp'){
+        font-size: 1rem;
+    }
+}
+.p-news__text{
+    font-size: 0.875rem;
+    line-height: (24 / 14);
+    color: f.$color-news-text;
+    margin-top: 24px;
+}

@@ -1,0 +1,34 @@
+@use "../foundation/index" as  f;
+
+.p-message__textArea{
+    position: absolute;
+    bottom: 50%;
+    left: 40px;
+    transform: translateY(50%);
+
+    @include f.mq('sp'){
+        bottom: 55px;
+        left: 15px;
+        transform: none;
+    }
+}
+.p-message__lead{
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: (37 / 22);
+    color: f.$color-message-font;
+
+    @include f.mq('sp'){
+        font-size: 1.25rem;
+    }
+}
+.p-message__text{
+    @include f.text();
+    color: f.$color-message-font;
+    margin-top: 40px;
+
+    @include f.mq('sp'){
+        font-size: 0.875rem;
+        margin-top: 32px;
+    }   
+}

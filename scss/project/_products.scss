@@ -1,0 +1,43 @@
+@use "../foundation/index" as f;
+
+.p-products__cards{
+}
+.p-products__item{
+    width: calc(260px / 940px * 100%);
+    margin-left: calc(80px / 940px * 100%);
+    box-shadow: none;
+
+    @include f.mq('sp'){
+        width: 260px;
+    }
+
+    &:nth-child(3n + 1){
+        margin-left: 0;
+    }
+    &:nth-child(n + 4){
+        margin-top: 48px;
+    }
+    &:focus,
+    &:hover{
+        .p-products__img img{
+            transform: translateY(-50%) scale(1.1);
+        }
+    }
+}
+.p-products__img{
+    padding-top: 100%;
+    overflow: hidden;
+}
+.p-products__body{
+}
+.p-products__text{
+    margin-top: 24px;
+}
+.p-products__price{
+    margin-top: 18px;
+    color: f.$color-products-price;
+
+    @include f.mq('sp'){
+        margin-top: 16px;
+    }
+}

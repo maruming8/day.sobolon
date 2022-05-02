@@ -1,0 +1,36 @@
+@use "../foundation/index" as  f;
+
+.p-feature__cards{
+}
+.p-feature__item{
+    width: calc(340px / 1200px * 100%);
+    margin-left: calc(90px /1200px * 100%);
+
+    @include f.mq('sp'){
+        width: 340px;
+    }
+
+    &:nth-child(3n + 1){
+        margin-left: 0;
+    }
+    &:nth-child(n + 4){
+        margin-top: 64px;
+    }
+    &:focus,
+    &:hover{
+        .p-feature__img img{
+            transform: translateY(-50%) scale(1.1);
+        }
+    }
+}
+.p-feature__img{
+    padding-top: calc(240px / 347px * 100%); 
+    overflow: hidden;
+}
+.p-feature__body{
+    padding: 32px 0;
+}
+.p-feature__text{
+    font-weight: 600;
+    text-align: center;
+}

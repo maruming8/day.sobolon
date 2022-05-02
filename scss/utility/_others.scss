@@ -1,0 +1,15 @@
+@use "../foundation/index" as  f;
+
+.u-none--sp{
+    @include f.mq('sp'){
+        display: none;
+    }
+}
+
+.u-concept--ml{
+    margin-left: calc(80px / 1200px * 100%);
+
+    @include f.mq('sp'){
+        margin-left: 0;
+    }
+}
